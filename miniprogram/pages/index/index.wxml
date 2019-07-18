@@ -1,6 +1,10 @@
 <!--index.wxml-->
 <view class="container">
 
+  <image src="../../images/poster.png">
+      <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfoCallback">点击登陆</button>
+  </image>
+
   <!-- 用户 openid -->
   <view class="userinfo">
     <button 

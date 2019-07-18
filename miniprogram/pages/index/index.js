@@ -36,6 +36,17 @@ Page({
     })
   },
 
+  getUserInfoCallback (e) {
+    if (!e.detail.iv) return;
+    wx.cloud.callFunction({
+      name: 'add',
+      data: e.detail,
+      success: res => {
+        console.log(res)
+      }
+    })
+  },
+
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {
       this.setData({
